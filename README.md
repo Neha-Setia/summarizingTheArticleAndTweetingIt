@@ -1,9 +1,11 @@
-# Text summarization and visualization using watson studio
+# Text summarization of a Travel blog and tweeting it to increase the reach and expand business.
+Twitter’s Value for Marketing is not hidden from all of us. Twitter is like the “Swiss Army knife” of social media. Like the classic penknife, which contains a multifaceted toolset designed to serve a variety of functions, you can use Twitter for multiple purposes, depending on your business goals and needs. However, growing your Twitter account and turning it into an actual tool that generates leads and builds up your brand. Growing a real following on Twitter takes more than sending out Tweets whenever your company has a product being released or an upcoming event. It’s about engaging with your target audience and interacting with them. Hashtags are so darn important in doing so. A hashtag is a label used on social media sites that makes it easier to find information with a theme or specific content. Associations can use hashtags to reach their target audience and to help members filter information.
 
-We will demonstrate a methodology to summarize & visualize text using Watson Studio. Text summarization is the process of creating a short and coherent version of a longer document. There are two methods to summarize the text, extractive & abstractive summarization. We will focus on extractive summarization which involves the selection of phrases and sentences from the source document to make up the new summary. Techniques involve ranking the relevance of phrases in order to choose only those most relevant to the meaning of the source. Some of the advantages of text summarization are below. We will also demonstrate different methods to visualize the data which can aid in providing quick peek of the data.
+Successful Twitter marketing is powerful. You can unlock new opportunities to grow your business online. If Twitter is used well, it can drive tons of traffic to your website. But you need to be creative when crafting tweets to promote your blog posts, videos, and other content. 
 
-`Summaries reduce reading time. When researching documents, summaries make the selection process easier.Text summarization improves the effectiveness of indexing.Text summarization algorithms are less biased than human summarizers.
-Personalized summaries are useful in question-answering systems as they provide personalized information.Using automatic or semi-automatic summarization systems enables commercial abstract services to increase the number of texts they are able to process.`
+In this Code Pattern We will demonstrate a methodology to summarize a blog using Watson Studio. We will make use of the existing Code Pattern [Text summarization and visualization using watson studio](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio). You will get the details of the text summarization from the suggested code pattern. This Code Pattern focuses on extractive summarization of the travel blog, extracting keywords converting them into relevant hashtags and tweeting it on twitter. 
+
+For the sake of an example to show how one can market and grow their business, we have taken an upcoming famous website [hostelgeeks.com](https://hostelgeeks.com/short-travel-stories/) where they share stories of the people who have travelled or visited the places listed in their travel blogs. Humans are fond of stories. Since childhood they have lots of memories to share which makes them happy. Sharing their experience with other people does two things. First any travel blog gives awareness to the travellers and also incites the desire to visit and have that experience too. Second it reviews and comments about any place from a credible source also decides the credibilty of that place which all the travellers look for before investing in any travel plans. So we ran text Summarization on the stories, converted them into meaningful impactful tweet and tweeted it using twitter API with relevant Hashtags.
 
 [A Brief about Text Summarization](https://machinelearningmastery.com/gentle-introduction-text-summarization)
 
@@ -13,7 +15,7 @@ When the reader has completed this code pattern, they will understand how to:
 * Create topic modeling on the text to extract important topics.
 * Create visualizations for better understanding of the data.
 * Interpret the summary and visualization of the data.
-* Analyze the text for further processing to generate recommendations or taking informed decisions.
+* Tweet it on twitter.
 
 # Architecture Diagram
 
