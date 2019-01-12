@@ -87,34 +87,13 @@ By creating a project in Watson Studio a free tier ``Object Storage`` service wi
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/blob/master/notebook/Text_Summarize_and_Visualize.ipynb
+* Enter this Notebook URL:https://github.com/Neha-Setia/summarizingTheArticleAndTweetingIt/blob/master/notebook/Text_Summarize_and_Tweet.ipynb
 * Select the runtime (1vCPU and 4GBRAM)
 * Click the `Create` button.
 
 ![](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/blob/master/doc/source/images/create_notebook.PNG)
 
-## 4. Add the data
-
-[Clone this repo](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio)
-Navigate to [data](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/tree/master/data) and save the file on the disk. The data has been extracted from one of the movie review websites online.
-
-Use `Find and Add Data` (look for the `10/01` icon)
-and its `Files` tab. From there you can click
-`browse` and add data file from your computer.
-
-![](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/blob/master/doc/source/images/add_file.png)
-
-Note: The data file is in the `data` directory
-
-## 5. Insert the credentials
-
-Select the cell below `Read the Data` section in the notebook.
-
-Use `Find and Add Data` (look for the `10/01` icon) and its `Files` tab. You should see the file names uploaded earlier. Make sure your active cell is the empty one created earlier. Select `Insert to code` (below your file name). Click `Insert credentials` from drop down menu.
-
-![](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/blob/master/doc/source/images/insert_cred.png)
-
-## 6. Run the notebook
+## 4. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -135,12 +114,24 @@ There are several ways to execute the code cells in your notebook:
     can `Run All` cells in your notebook, or you can `Run All Below`, that will
     start executing from the first cell under the currently selected cell, and then
     continue executing all cells that follow.
-    
-## 7. Analyze the results
+
+
+## 5. Get access tokens and consumer key to use Twitter Api.
+* Go to `https://developer.twitter.com/` and sign in using twitter login ID. If you don't have login credentials, then sign up.
+* Click on Apps(top right of the navigation bar)
+![](doc/source/images/apps.png)
+* Click on create an app button.
+![](doc/source/images/createanapp.png)
+* Follow the process, answer the questions and it should create your app.
+![](doc/source/images/appcreationprocess.png)
+* Click on the details button and then click on `Keys and Tokens` and get the access tokens and consumer keys.
+![](doc/source/images/keysandtokens.png)
+
+## 6. Analyze the results
 
 Lets look at the summarization of the document. We can observe that all the key pointers are included in the summary. The text ranking algorithm has produced good results. 
 
-`Before its release, Mission: Impossible Fallout has been known for two things: the fact that it\'s the first direct sequel in the series and THAT injury to Tom Cruise.Let\'s get the injury out of the way first.', "The shot is in the movie and it will make you wince because you know the context, but otherwise you don't really notice any difference as the stunt in question is just the latest in a long line of deathdefying activities featuring Cruise.What makes more of an impact on the sixth movie in the series is its connection to the previous movie, Rogue Nation, with the return of the villainous Solomon Lane (played creepily again by Sean Harris) and his nefarious Syndicate, who are again threatening the world.With the addition of Ethan Hunt's former wife Julia (Michelle Monaghan) from the third movie, Fallout is immediately given more depth than previous outings and the stakes feel higher, with Ethan Hunt (Cruise) haunted by his past mistakes.", "At times, even IMAX doesn't feel big enough to contain it.Putting aside the direct connection to the previous movie and the series' first returning director in Christopher McQuarrie, it's pretty much business as usual for Ethan and the IMF.", "There's no possible way this can go wrong, right?What follows is the usual, winning Mission: Impossible mix of spy games, double \\x96 and triple \\x96 crosses, chases of all kinds and extended set pieces in various locations around the world.", "Of the newcomers, Henry Cavill has the biggest role and Fallout makes full use of his considerable frame with some muscular fights, while The Crown's Vanessa Kirby relishes her enigmatic White Widow role, even if she is underused.But you don't really come to a Mission: Impossible movie for the cast, you come for the action \\x96 and you will not be disappointed.`
+`I dislike entering book shops. Every time I walk into a book shop, I will end up buying one. I entered an international bookshop in Eixample, Barcelona, while looking for some cool things to do in Barcelona. And as expected, a book named „The dead alleys of Barcelona“ got my attention, a crime novel. Long story shot: I bought it, went home, and started reading. In this book, the author Stefanie Kremser talks about a special part of El Born, downtown Barcelona. She describes this magical square, this narrow street the main character lived in. I didn’t know this exact street, and I was curious. I went downtown, wandered around the square and saw this café with the few tables on the terrace. Until today, 7 years later, it is still my favorite café in Barcelona – thanks to this book! – – – This Short Travel Story was written by Matt, the guy behind Hostelgeeks. Here at Hostelgeeks we award and collect 5 Star Hostels around the world. Fancy more coffee? Find the 13 best coffee shops in Barcelona here. Barcelona is our home. You can find our best-kept secret tips for Barcelona as well as 23 fun things to do. It also includes our favorite Café in Barcelona. Our hottest tip for Barcelona? Rent a Red Vespa (www.via-vespa.com) to get around easily.  Your email address will not be published.`
 
 As we can see in the below image, the important words in the corpus have been highlighted which will help in inference of the data. Wordclouds are beautifully insightful with pros and cons. Word clouds can allow you to share back results from research in a way that does not require an understanding of the technicalities. Some of the pros are below.
 * It reveals the essential. 
@@ -152,9 +143,8 @@ As observed, skilled interpretation is what provides the beautiful insights.
 
 Latent Dirichlet Allocation (LDA) is a probabilistic model with interpretable topics. Topic modeling is one of the most popular NLP techniques with several real-world applications such as dimensionality reduction, text summarization, recommendation engine, etc. To visualize our topics in a 2-dimensional space we will use the pyLDAvis library. This visualization is interactive in nature and displays topics along with the most relevant words.
 
-![](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/blob/master/doc/source/images/results_2.png)
 
-As we can see from the topics, the data is referring to Mission Impossible Fallout movie. Skilled interpretation is needed to an extent for consuming the insights from the results.
+
 
 # Troubleshooting
 
