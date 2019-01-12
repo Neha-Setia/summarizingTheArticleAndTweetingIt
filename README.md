@@ -143,7 +143,14 @@ As observed, skilled interpretation is what provides the beautiful insights.
 
 Latent Dirichlet Allocation (LDA) is a probabilistic model with interpretable topics. Topic modeling is one of the most popular NLP techniques with several real-world applications such as dimensionality reduction, text summarization, recommendation engine, etc. To visualize our topics in a 2-dimensional space we will use the pyLDAvis library. This visualization is interactive in nature and displays topics along with the most relevant words.
 
+on the running the cell with command 
+``` status = api.update_status(tweet_with_summary_hashtags)
+print(status.id) 
+```
 
+you will get a code which indicates the tweet with hashtags has been tweeted.
+
+![](doc/source/images/tweeted.png)
 
 
 # Troubleshooting
