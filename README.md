@@ -19,7 +19,7 @@ When the reader has completed this code pattern, they will understand how to:
 
 # Architecture Diagram
 
-![](https://github.com/IBM/text-summarization-and-visualization-using-watson-studio/blob/master/doc/source/images/architecture.png)
+![](https://github.com/Neha-Setia/summarizingTheArticleAndTweetingIt/blob/master/doc/source/images/architecture.png)
 
 1.  User logs into Watson Studio, creates an instance which includes object storage.
 2.  User uploads the data file to the object storage.
