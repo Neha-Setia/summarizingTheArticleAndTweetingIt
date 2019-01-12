@@ -120,11 +120,16 @@ There are several ways to execute the code cells in your notebook:
 * Go to `https://developer.twitter.com/` and sign in using twitter login ID. If you don't have login credentials, then sign up.
 * Click on Apps(top right of the navigation bar)
 ![](doc/source/images/apps.png)
+
 * Click on create an app button.
 ![](doc/source/images/createanapp.png)
+
 * Follow the process, answer the questions and it should create your app.
 ![](doc/source/images/appcreationprocess.png)
+
 * Click on the details button and then click on `Keys and Tokens` and get the access tokens and consumer keys.
+![](doc/source/images/tweeted.png)
+
 ![](doc/source/images/keysandtokens.png)
 
 ## 6. Analyze the results
